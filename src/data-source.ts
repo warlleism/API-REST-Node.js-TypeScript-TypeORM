@@ -4,6 +4,7 @@ import { DataSource } from 'typeorm'
 import { Room } from './entities/Room'
 import { Video } from './entities/Video'
 import { Subject } from './entities/Subject'
+import { User } from './entities/User'
 
 const port = process.env.DB_PORT as number | undefined
 
@@ -14,7 +15,7 @@ export const AppDataSource = new DataSource({
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    entities: [Room, Subject, Video],
+    entities: [Room, Subject, Video, User],
     synchronize: true,
     migrations: [`${__dirname}/**/migrations/*.{ts,js}`]
 })
