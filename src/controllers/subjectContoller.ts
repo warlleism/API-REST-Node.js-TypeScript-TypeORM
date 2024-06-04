@@ -2,6 +2,7 @@ import { Request, Response } from "express"
 import { subjectRepository } from "../repositories/subjectRepository"
 
 export class SubjectController {
+    
     async create(req: Request, res: Response) {
         const { name } = req.body
 

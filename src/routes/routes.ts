@@ -17,9 +17,10 @@ routes.post('/findOneSubject', new SubjectController().findOne)
 routes.put('/updateOneSubject', new SubjectController().update)
 
 routes.post('/room', new RoomController().create)
-routes.get('/getRoom', new RoomController().get)
+routes.post('/createVideo', new RoomController().createVideo)
+routes.post('/roomSubject', new RoomController().roomSubject)
+routes.get('/list', new RoomController().list)
 
-routes.post('/video', new VideoController().create)
-routes.post('/allVideos', new VideoController().get)
+routes.get('/allVideos', new VideoController().get)
 
 export default routes;
